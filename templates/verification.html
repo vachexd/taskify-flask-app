@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>verification</title>
+</head>
+<body>
+    <form action="http://127.0.0.1:5000/registration" method="POST" >
+
+        {% if wrongmessage %}
+        <p>{{wrongmessage}}</p>
+        {% endif %}
+    <p>enter the verification code sent on the Gmail address {{mail}}</p>
+        <p>check spam folder</p>
+        <input type="hidden" value="{{mail}}" name="mail">
+
+    <p><input placeholder="code" name="code" type="number"></p>
+        <p><input type = "submit" value = "submit" /></p>
+
+        </form>
+</body>
+</html>

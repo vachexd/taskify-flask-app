@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if error!=None %}
+<p>Wrong input</p>
+{% endif %}
+<form method="POST" >
+    <input placeholder="task" type="text" name="task">
+    <input placeholder="date" type="date" name="date">
+    <input placeholder="hour" type="time" name="hour">
+    <input type="submit" placeholder="add task">
+    <a href="http://127.0.0.1:5000/loggedin">cancel</a>
+
+</form>
+</body>
+</html>

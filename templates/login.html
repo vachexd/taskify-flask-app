@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/style.css" />
+  </head>
+  <body>
+    <div class="bg-img">
+      <div class="content">
+        <header>Login</header>
+
+
+
+
+        <form method="POST">
+
+          <p style="color: white">{{status}}</p>
+          <div class="field">
+            <span class="fa fa-user"></span>
+            <input type="text" placeholder="Enter Email" name="nm" />
+          </div>
+          <div class="field space">
+            <span class="fa fa-lock"></span>
+            <input
+              type="password"
+              class="pass-key"
+              placeholder="Enter Password"
+              name="pw"
+              required
+            />
+            <span class="show">Show</span>
+          </div>
+          <div class="pass">
+            <a href="http://127.0.0.1:5000/forgotpassword">Forgot Password?</a>
+          </div>
+          <div class="field">
+            <input type="submit" value="LOGIN" />
+          </div>
+        </form>
+        <div class="signup">
+          <p>Don't have account? <a href="http://127.0.0.1:5000/registration">Sign up Now</a></p>
+
+        </div>
+        <a style="color:white; text-decoration-line:none; font-family: 'Poppins',sans-serif;" href="{{url_for('googleloginpage')}}">Google sign in </a>
+      </div>
+    </div>
+    <script>
+      const pass_field = document.querySelector(".pass-key");
+      const showBtn = document.querySelector(".show");
+      showBtn.addEventListener("click", function () {
+        if (pass_field.type === "password") {
+          pass_field.type = "text";
+          showBtn.textContent = "Hide";
+          showBtn.style.color = "#3498db";
+        } else {
+          pass_field.type = "password";
+          showBtn.textContent = "Show";
+          showBtn.style.color = "#222";
+        }
+      });
+    </script>
+
+  </body>
+</html>
